@@ -11,7 +11,7 @@ const useClickOutside = (initialIsVisible) => {
     }
 
     const handleTabOut = event => {
-        if (event.keyCode == 9) {
+        if (event.keyCode == 9 || event.keyCode == 27) {
             setIsVisible(false)
         }
     }

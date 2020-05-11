@@ -10,7 +10,7 @@ const useClickOutside = (initialIsVisible) => {
         }
     }
 
-    const handleTabOut = event => {
+    const tabOrEscapeHandler = event => {
         if (event.keyCode == 9 || event.keyCode == 27) {
             setIsVisible(false)
         }

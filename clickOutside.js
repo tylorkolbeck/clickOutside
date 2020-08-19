@@ -18,10 +18,10 @@ const useClickOutside = (initialIsVisible) => {
 
     useEffect(() => {
         document.addEventListener('click', handleClickOutside, true)
-        document.addEventListener('keydown', handleTabOut, true)
+        document.addEventListener('keydown', tabOrEscapeHandler, true)
         return () => {
             document.removeEventListener('click', handleClickOutside, true)
-            document.removeEventListener('keydown', handleTabOut, true)
+            document.removeEventListener('keydown', tabOrEscapeHandler, true)
         }
     })
     return {ref, isVisible, setIsVisible}
